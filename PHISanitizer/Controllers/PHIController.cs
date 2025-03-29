@@ -7,9 +7,9 @@ namespace PHISanitizer.Controllers
     [Route("[controller]")]
     public class PHIController : ControllerBase
     {
-        private readonly IPHISanitizationHandler sanitizationHandler;
+        private readonly IPHISanitizationProcessor sanitizationHandler;
 
-        public PHIController(IPHISanitizationHandler sanitizationHandler)
+        public PHIController(IPHISanitizationProcessor sanitizationHandler)
         {
             this.sanitizationHandler = sanitizationHandler;
         }
@@ -24,7 +24,7 @@ namespace PHISanitizer.Controllers
 
             try
             {
-                return File(await sanitizationHandler.Handle(files), "application/zip", "sanitized_files.zip");
+                return File(await sanitizationHandler.Process(files), "application/zip", "sanitized_files.zip");
             }
             catch (Exception ex)
             {

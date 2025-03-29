@@ -9,7 +9,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddSingleton<IPHISanitizer, PHISanitizer.Services.PHISanitizer>();
-builder.Services.AddTransient<IPHISanitizationHandler, PHISanitizationHandler>(); 
+builder.Services.AddTransient<IPHISanitizationProcessor, PHISanitizationProcessor>(); 
 
 builder.Services.AddCors(options =>
 {

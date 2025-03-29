@@ -2,20 +2,19 @@
 
 using System.IO.Compression;
 using System.Text;
-using Microsoft.AspNetCore.Mvc;
 
 namespace PHISanitizer.Services
 {
-    public class PHISanitizationHandler : IPHISanitizationHandler
+    public class PHISanitizationProcessor : IPHISanitizationProcessor
     { 
         private readonly IPHISanitizer sanitizer;
 
-        public PHISanitizationHandler(IPHISanitizer sanitizer)
+        public PHISanitizationProcessor(IPHISanitizer sanitizer)
         {
             this.sanitizer = sanitizer;
         } 
 
-        public async Task<MemoryStream> Handle(IFormFileCollection files)
+        public async Task<MemoryStream> Process(IFormFileCollection files)
         {
             var zipStream = new MemoryStream();
             using (var archive = new ZipArchive(zipStream, ZipArchiveMode.Create, true))
