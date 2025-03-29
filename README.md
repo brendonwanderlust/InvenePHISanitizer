@@ -18,22 +18,26 @@ A simple web application that automatically identifies and redacts PHI from text
 
 ### Frontend Setup
 
-1. Navigate to the frontend directory
+1. Clone the repository
+   ```
+   git clone https://github.com/brendonwanderlust/invene-phi-redactor-ui.git 
+   ```
+2. Navigate to the frontend directory from VS Code
    ```
    cd your-local-frontend-directory
    ```
 
-2. Install dependencies
+3. Install dependencies
    ```
    npm install
    ```
 
-3. Start the Angular development server
+4. Start the Angular development server
    ```
    ng serve
    ```
 
-4. Access the application by navigating to `http://localhost:4200`
+5. Access the application by navigating to `http://localhost:4200`
 
 ## Usage
 
