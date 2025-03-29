@@ -78,5 +78,6 @@ For PHI that follows predictable patterns, the system uses regular expressions t
 
 - Text-Based Files: The current implementation assumes all files are text-based
 - Line-by-Line Processing: PHI detection works on a per-line basis, not across lines
+- One PHI per line: Assumes doc is structured with only one PHI Per line
 - Common PHI Formats: Focuses on standard US formats for PHI (SSN, phone numbers, etc.)
 - Colon Delimiter: For field-based PHI, assumes a colon separates the field name from the value
